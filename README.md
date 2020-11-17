@@ -5,4 +5,6 @@ The first hands-on project in the course involved the use of an Application Prog
 
 The second project was the final assignment of the course. It was a web scraping project where I scraped basketball data from Wikipedia HTML tables. It was visually easier to do this project in Google Colaboratory ("Colab"), but one can open any Colab file with Jupyter Notebooks as well. 
 
+A number of the hands-on labs I completed as part of the course are available in my Gists: https://gist.github.com/kaatori
+
 Please let me know if you find issues or have any questions. 
