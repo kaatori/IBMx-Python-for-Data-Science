@@ -1,7 +1,5 @@
 # Import the pandas and wget libraries.
 import pandas as pd
-import wget as wget
-
 
 # The below function was pre-defined by the course authors
 # for students to focus on the analysis process which I exhibit below.
