@@ -2,7 +2,7 @@
 import pandas as pd
 
 # The below function was pre-defined by the course authors
-# for students to focus on the analysis process which I exhibit below.
+# for students to focus on the analysis process which are outlined below.
 
 def one_dict(list_dict):
     keys = list_dict[0].keys()
@@ -13,10 +13,9 @@ def one_dict(list_dict):
     return out_dict
 
 # The NBA.com API doesn't like cloud-based IPs, so the course authors advised students to finish the assignment locally in a text editor.
-# I wrote the following code using PyCharm. I worked through several errors (some major, some minor) until I got everything right.
-# This was my first time using this sort of API.
+# The following code was written in PyCharm. 
 
-# In your environment, make sure to install the NBA packages first before running the code below, otherwise the code will not work.
+# In the user's environment, make sure to install the NBA packages first before running the code below, otherwise the code will not work.
 from nba_api.stats.static import teams
 
 # Creating an object 'nba_teams' and using it to store info from NBA.com using the 'get_teams()' method from 'teams'
@@ -40,28 +39,28 @@ print("Here is specific data through accessing 'nickname'=='Warriors':\n", df_wa
 
 # Create an object for just the warriors team info that we want:
 id_warriors = df_warriors[['id']].values[0][0]
-# My note: notice the syntax with [['id']] double brackets and values[0,0] single bracket for list.
+
+# Note: notice the syntax with [['id']] double brackets and values[0,0] single bracket for list.
 print("The ID of the warriors is:\n", id_warriors)
 
-# Then the lab had me import this particular section of the nba_api for particular statistical data and the function leaguegamefinder.
-# I had to try several packages intalled on PyCharm because the titles were a bit off from when this IBMx course was written.
-
+# Import the function 'leaguegamefinder' uisng the NBA API.
+# Note: It may be necessary to try several packages installed on PyCharm because the titles of the packages were a bit off from when this IBMx course was written.
 from nba_api.stats.endpoints import leaguegamefinder
 
 # Creating an object to store data found for the Warriors.
 gamefinder = leaguegamefinder.LeagueGameFinder(team_id_nullable=id_warriors)
 
-# Using the method get_json()
+# Using the method get_json().
 print("Use the get_json() method :\n", gamefinder.get_json())
 
-# Using the method get_data_frames()
+# Using the method get_data_frames().
 print("Use the get_data_frames() method:\n", gamefinder.get_data_frames())
 
-# Creating an object for the game data to be stored for its dataframe
+# Creating an object for the game data to be stored for its dataframe.
 games = gamefinder.get_data_frames()[0]
 print(games.head())
 
-# I'd also never used a pkl file before, so I had to learn on the fly.
+# The course required usage of a file called 'Golden_State.pkl'. See how to use pickle files in Python here: https://wiki.python.org/moin/UsingPickle 
 file_name = "/Users/kasan/Downloads/Golden_State.pkl"
 games = pd.read_pickle(file_name)
 print("games.head() reveals: \n", games.head())
