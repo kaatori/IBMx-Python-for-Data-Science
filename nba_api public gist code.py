@@ -1,8 +1,8 @@
-# Import the pandas and wget libraries.
+# Import the pandas library.
 import pandas as pd
 
-# The below function was pre-defined by the course authors
-# for students to focus on the analysis process which are outlined below.
+# The below function was pre-defined by the course authors for students to focus on the analysis process which are outlined below.
+# All code after this function is written by K.C. Sperow in completion of the IBMx Python Basics for Data Science course on edx.org.
 
 def one_dict(list_dict):
     keys = list_dict[0].keys()
@@ -12,7 +12,8 @@ def one_dict(list_dict):
             out_dict[key].append(value)
     return out_dict
 
-# The NBA.com API doesn't like cloud-based IPs, so the course authors advised students to finish the assignment locally in a text editor.
+# The NBA.com API doesn't work with cloud-based IPs. 
+# The course authors advised students to finish the assignment locally in a text editor, and then upload their code to be graded.
 # The following code was written in PyCharm. 
 
 # In the user's environment, make sure to install the NBA packages first before running the code below, otherwise the code will not work.
